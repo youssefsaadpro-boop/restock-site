@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="color-scheme" content="light dark">
+<title>Restock, Dimanche 1er novembre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #FBF8F2;
+  --text: #1C232B;
+  --muted: #666A6E;
+  --rule: #D9D3C7;
+  --accent: #A85400;
+  --orange: #FF9900;
+  --navy: #232F3E;
+  --link: #007185;
+  --box-fill: #232F3E;
+  --box-text: #FFFFFF;
+  --serif: "Instrument Serif", Georgia, serif;
+  --sans: "Instrument Sans", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12171D;
+    --text: #EDE8DF;
+    --muted: #9CA3AA;
+    --rule: #2A333D;
+    --accent: #FFAE3D;
+    --link: #8BE0EE;
+    --box-fill: #2B3A4D;
+    --box-text: #EDE8DF;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.6; font-weight: 400; }
+h1, h2, h3, p, ul, ol { margin: 0; padding: 0; font-weight: 400; }
+ul, ol { list-style: none; }
+em, i { font-family: var(--serif); font-style: italic; font-weight: 400; }
+strong, b { font-weight: 400; }
+a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.icon { flex: none; display: block; }
+.lesson-title, .lesson-sub, .radar-title, .challenge-text, .quiz-q, .compact-title, .week-note, .review-list li { text-wrap: balance; }
+/* Le « 1 » d'Instrument Serif se lit comme un « I » : 1P et 3P passent en Instrument Sans. */
+.code-term { font-family: var(--sans); font-style: normal; font-size: 0.82em; letter-spacing: -0.01em; }
+.page { max-width: 680px; margin: 0 auto; padding: 32px 22px 56px; }
+.label { font-size: 11px; line-height: 1.5; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+.label-accent { color: var(--accent); display: flex; align-items: center; gap: 8px; }
+.section { margin-top: 56px; }
+.section-ruled { border-top: 1px solid var(--text); padding-top: 18px; }
+
+/* En-tête */
+.brand { font-family: var(--serif); font-size: clamp(60px, 5vw + 40px, 76px); line-height: 1; letter-spacing: -0.01em; }
+.tagline { font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.3; color: var(--muted); margin-top: 8px; }
+.meta { display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid var(--text); border-bottom: 1px solid var(--rule); margin-top: 18px; padding: 10px 0; color: var(--muted); }
+.times { display: flex; flex-wrap: wrap; gap: 8px 22px; padding-top: 12px; font-size: 13px; line-height: 1.4; color: var(--muted); }
+.times li { display: flex; align-items: center; gap: 7px; }
+
+/* Compétence du jour */
+.series { display: flex; align-items: center; gap: 14px; margin-top: 12px; }
+.series-bar { flex: 1; height: 1px; background: var(--rule); position: relative; }
+.series-bar span { position: absolute; left: 0; top: -1px; height: 3px; background: var(--orange); }
+.series-count { font-family: var(--serif); font-style: italic; font-size: 16px; line-height: 1; color: var(--muted); white-space: nowrap; }
+.lesson-title { font-family: var(--serif); font-size: clamp(56px, 8.6vw + 22px, 76px); line-height: 1; letter-spacing: -0.015em; margin-top: 26px; }
+.lesson-sub { font-family: var(--serif); font-style: italic; font-size: 24px; line-height: 1.22; color: var(--muted); margin-top: 16px; }
+.schema { margin: 30px 0 0; }
+.schema svg { display: block; width: 100%; height: auto; }
+.points { margin-top: 28px; display: grid; gap: 14px; }
+.points li, .reflex { display: flex; gap: 12px; align-items: flex-start; }
+.points .icon, .reflex .icon { margin-top: 5px; color: var(--accent); }
+.lead-in { font-family: var(--serif); font-style: italic; font-size: 18px; line-height: 1.3; }
+
+/* Défi */
+.challenge { background: var(--navy); color: #FFFFFF; border-radius: 2px; padding: 26px 22px 24px; margin-top: 36px; }
+.challenge .label { color: var(--orange); display: flex; align-items: center; gap: 8px; }
+.challenge-text { font-family: var(--serif); font-style: italic; font-size: clamp(32px, 1.6vw + 26px, 38px); line-height: 1.12; margin-top: 12px; }
+.challenge-hint { font-size: 14px; line-height: 1.5; color: #C9D1D9; margin-top: 16px; }
+.challenge a { color: #8BE0EE; }
+
+/* Réponses à révéler */
+.reveal { margin-top: 14px; }
+.reveal summary { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid currentColor; border-radius: 2px; font-size: 14px; font-weight: 500; cursor: pointer; list-style: none; }
+.reveal summary::-webkit-details-marker { display: none; }
+.reveal summary:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+.reveal-text { margin-top: 12px; font-size: 15px; }
+.reveal-why { opacity: 0.85; }
+.quiz { margin-top: 36px; }
+.quiz-list { margin-top: 8px; border-bottom: 1px solid var(--rule); }
+.fold { border-top: 1px solid var(--rule); }
+.quiz-list .fold:first-child { border-top: 0; }
+.fold summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 44px; padding: 12px 0; cursor: pointer; list-style: none; }
+.fold summary::-webkit-details-marker { display: none; }
+.fold summary:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+.fold summary .icon { color: var(--muted); transition: transform 0.15s ease; }
+.fold[open] summary .icon { transform: rotate(180deg); }
+.fold-body { padding: 0 28px 16px 0; font-size: 15px; }
+.fold-body p + p { margin-top: 10px; }
+.quiz-q { font-family: var(--serif); font-size: 24px; line-height: 1.2; }
+.deep { margin-top: 28px; border-bottom: 1px solid var(--rule); }
+.deep-label { font-size: 15px; font-weight: 500; }
+.deep-sub { font-weight: 500; color: var(--muted); margin-top: 16px; }
+.status { font-size: 14px; color: var(--accent); margin-top: 12px; }
+.fold-ref { font-size: 14px; color: var(--muted); }
+.yesterday { border-top: 0; border-bottom: 1px solid var(--rule); color: var(--muted); font-size: 15px; }
+.review-label { margin-top: 32px; }
+.example { border: 1px solid var(--rule); border-radius: 2px; padding: 14px 16px; margin-top: 18px; }
+.example-label { color: var(--muted); margin-bottom: 6px; }
+.fold-body .example + p { margin-top: 18px; }
+
+/* Radar */
+.radar-list { display: grid; gap: 40px; margin-top: 24px; }
+.radar-item { display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 8px; }
+.radar-num { font-family: var(--serif); font-size: 60px; line-height: 0.95; color: var(--accent); }
+.radar-tag { color: var(--muted); }
+.radar-title { font-family: var(--serif); font-size: clamp(30px, 1vw + 26px, 34px); line-height: 1.08; margin-top: 6px; }
+.radar-sentence { font-size: 15px; color: var(--muted); margin-top: 12px; }
+.reflex { margin-top: 14px; font-size: 15px; }
+.source-link { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; margin-top: 2px; }
+
+/* À lire aussi, agenda */
+.compact-list { margin-top: 12px; }
+.compact-list li { border-top: 1px solid var(--rule); padding: 12px 0; }
+.compact-list li:first-child { border-top: 0; }
+.compact-title { font-family: var(--serif); font-size: 21px; line-height: 1.2; }
+a.compact-title { display: block; color: var(--text); text-decoration: none; }
+a.compact-title:hover, a.compact-title:focus-visible { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.compact-sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.agenda-date { font-size: 13px; color: var(--accent); }
+
+/* Vocabulaire */
+.vocab { display: grid; grid-template-columns: 1fr 1fr; margin-top: 18px; }
+.vocab-item { min-width: 0; padding-right: 16px; }
+.vocab-item + .vocab-item { border-left: 1px solid var(--rule); padding-right: 0; padding-left: 16px; }
+.vocab-term { font-family: var(--serif); font-size: 44px; line-height: 1; overflow-wrap: anywhere; }
+.vocab-full { font-family: var(--serif); font-style: italic; font-size: 17px; line-height: 1.2; color: var(--muted); margin-top: 8px; }
+.vocab-def { font-size: 15px; margin-top: 12px; }
+
+/* Ta semaine */
+.days { display: flex; justify-content: space-between; max-width: 400px; margin-top: 14px; }
+.day { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; }
+.day span { width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--rule); border-radius: 50%; font-size: 12px; color: var(--muted); }
+.day.today span { background: var(--orange); border-color: var(--orange); color: #0F1111; font-weight: 500; }
+.day .icon { display: none; }
+.day.done .day-letter { display: none; }
+.day.done .icon { display: block; }
+.day.done span { border-color: var(--accent); color: var(--accent); }
+.day.done.today span { border-color: var(--orange); color: #0F1111; }
+.week-note { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.25; color: var(--muted); margin-top: 14px; }
+.mark-done { display: inline-flex; align-items: center; min-height: 44px; margin-top: 12px; padding: 0 14px; border: 1px solid var(--rule); border-radius: 2px; background: none; color: var(--muted); font: 500 13px/1 var(--sans); cursor: pointer; }
+.mark-done[hidden] { display: none; }
+.mark-done[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+
+/* Revue et Agir */
+.review-list { margin-top: 12px; }
+.review-list li { border-top: 1px solid var(--rule); padding: 10px 0; font-family: var(--serif); font-size: 22px; line-height: 1.2; }
+.review-list li:first-child { border-top: 0; }
+.review-terms { font-size: 14px; color: var(--muted); margin-top: 8px; }
+.act-lines { margin-top: 14px; display: grid; gap: 10px; color: #E4E8EC; font-size: 15px; }
+.act-note { margin-top: 18px; font-size: 15px; }
+
+/* Archive */
+.archive-list { margin-top: 12px; }
+.archive-list li { border-top: 1px solid var(--rule); }
+.archive-list li:first-child { border-top: 0; }
+.archive-row { display: block; min-height: 44px; padding: 14px 0; color: var(--text); text-decoration: none; }
+.archive-row:hover .archive-title { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.archive-date { display: block; font-size: 13px; color: var(--accent); }
+.archive-title { display: block; font-family: var(--serif); font-size: 26px; line-height: 1.15; margin-top: 2px; text-wrap: balance; }
+
+/* Pied de page */
+.footer { border-top: 1px solid var(--rule); margin-top: 56px; padding-top: 16px; font-size: 13px; color: var(--muted); }
+
+/* Schéma */
+.sch-box { fill: none; stroke: var(--text); stroke-width: 1; }
+.sch-box-accent { fill: none; stroke: var(--orange); stroke-width: 1.3; }
+.sch-box-fill { fill: var(--box-fill); stroke: none; }
+.sch-box-dashed { fill: none; stroke: var(--text); stroke-width: 1; stroke-dasharray: 3 3; }
+.sch-label { font-family: var(--serif); font-size: 15px; fill: var(--text); text-anchor: middle; }
+.sch-label-fill { fill: var(--box-text); }
+.sch-note { font-family: var(--serif); font-style: italic; font-size: 13px; fill: var(--muted); text-anchor: middle; }
+.sch-row { font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 2px; fill: var(--muted); }
+.sch-arrow { stroke: var(--text); stroke-width: 1; fill: none; }
+.sch-rule { stroke: var(--rule); stroke-width: 1; }
+</style>
+</head>
+<body data-day="2026-11-01">
+<main class="page">
+
+<header>
+  <p class="brand">Restock</p>
+  <p class="tagline">Ta veille retail, e-commerce et IA du matin</p>
+  <p class="meta label"><span>Dimanche 1er novembre 2026</span><span>9&nbsp;min</span></p>
+  <ul class="times" aria-label="Les temps de l'édition">
+    <li><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5C6.7 2.6 4.8 2.3 2.5 2.5v9.8c2.3-.2 4.2.1 5.5 1 1.3-.9 3.2-1.2 5.5-1V2.5C11.2 2.3 9.3 2.6 8 3.5Z"/><path d="M8 3.5v9.8"/></svg>Leçon 4&nbsp;min</li>
+    <li><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="5.6"/><circle cx="8" cy="8" r="2.2"/></svg>Défi 2&nbsp;min</li>
+    <li><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="m10.4 10.4 3.1 3.1"/></svg>Radar 3&nbsp;min</li>
+  </ul>
+</header>
+<section class="section" aria-labelledby="lesson-title">
+  <p class="label label-accent">Compétence du jour · Métier vendor</p>
+  <div class="series">
+    <div class="series-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="12" aria-label="Progression de la série"><span style="width:8.3%"></span></div>
+    <p class="series-count">leçon 1 sur 12</p>
+  </div>
+  <h1 class="lesson-title" id="lesson-title"><span class="code-term">1P</span> ou <span class="code-term">3P</span> : qui décide du prix ?</h1>
+  <p class="lesson-sub">Deux modèles, deux façons de décider du prix. À savoir distinguer en trente secondes.</p>
+  <figure class="schema"><svg viewBox="0 0 350 224" role="img" aria-labelledby="schema-title schema-desc" xmlns="http://www.w3.org/2000/svg"><title id="schema-title">Le 1P et le 3P comparés</title><desc id="schema-desc">En 1P, la marque vend en gros à Amazon, qui fixe le prix au client. En 3P, la marque fixe son prix et vend au client sur la place de marché d'Amazon, en payant une commission.</desc><defs><marker id="sch-head" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path class="sch-arrow" d="M1 1 7 4 1 7"/></marker></defs><text class="sch-row" x="0" y="11">1P</text><line class="sch-rule" x1="0" y1="20" x2="350" y2="20"/><rect class="sch-box-accent" x="0.65" y="50" width="84" height="38" rx="2"/><text class="sch-label" x="42.65" y="74">Marque</text><line class="sch-arrow" x1="88.65" y1="69" x2="129" y2="69" marker-end="url(#sch-head)"/><text class="sch-note" x="108.825" y="40">vend en gros</text><rect class="sch-box-fill" x="133" y="50" width="84" height="38" rx="2"/><text class="sch-label sch-label-fill" x="175" y="74">Amazon</text><line class="sch-arrow" x1="221" y1="69" x2="261.35" y2="69" marker-end="url(#sch-head)"/><text class="sch-note" x="241.175" y="40">fixe le prix</text><rect class="sch-box" x="265.35" y="50" width="84" height="38" rx="2"/><text class="sch-label" x="307.35" y="74">Client</text><text class="sch-row" x="0" y="117">3P</text><line class="sch-rule" x1="0" y1="126" x2="350" y2="126"/><rect class="sch-box-accent" x="0.65" y="156" width="84" height="38" rx="2"/><text class="sch-label" x="42.65" y="180">Marque</text><line class="sch-arrow" x1="88.65" y1="175" x2="129" y2="175" marker-end="url(#sch-head)"/><text class="sch-note" x="108.825" y="146">tu fixes ton prix</text><rect class="sch-box-dashed" x="133" y="156" width="84" height="38" rx="2"/><text class="sch-label" x="175" y="180">Amazon</text><line class="sch-arrow" x1="221" y1="175" x2="261.35" y2="175" marker-end="url(#sch-head)"/><text class="sch-note" x="241.175" y="146">livre le client</text><rect class="sch-box" x="265.35" y="156" width="84" height="38" rx="2"/><text class="sch-label" x="307.35" y="180">Client</text><text class="sch-note" x="175" y="214">place de marché, commission à payer</text></svg></figure>
+  <ul class="points">
+    <li><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 4.8"/></svg><p><span class="lead-in"><span class="code-term">1P</span>.</span> Tu vends en gros, Amazon fixe le prix client.</p></li>
+    <li><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 4.8"/></svg><p><span class="lead-in"><span class="code-term">3P</span>.</span> Tu fixes ton prix et tu paies des commissions.</p></li>
+    <li><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.8 1.8 3.6 9h4l-.6 5.2L12.4 7h-4l.4-5.2Z"/></svg><p><span class="lead-in">Test rapide.</span> En 3P, le stock reste le tien.</p></li>
+  </ul>
+  <details class="fold deep" open>
+    <summary><span class="deep-label">Aller au fond</span><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6"/></svg></summary>
+    <div class="fold-body">
+      <p>En 1P, la marque vend ses produits à Amazon au prix de gros convenu. Amazon les achète, fixe son prix de vente au client et porte le risque sur le stock acheté.</p>
+      <p>En 3P, un vendeur propose ses produits directement sur la place de marché. Il fixe son prix, reste propriétaire de son stock et paie des commissions. Il peut confier la logistique à Amazon sans que celui-ci devienne le vendeur.</p>
+      <p>Pourquoi ça compte pour toi : demande d’abord qui vend, car la réponse dit qui décide du prix et qui porte le stock.</p>
+      <div class="example">
+        <p class="label example-label">Exemple fictif</p>
+        <p>Un produit coûte 40 € à fabriquer. En 1P, la marque le vend 60 € à Amazon et garde 20 €. En 3P, elle le vend 100 € au client et paie 25 € de frais : il lui reste 35 €, avant ses autres charges.</p>
+      </div>
+      <p class="deep-sub">Mini-action, 5 min, facultative</p>
+      <p>Repère sur une fiche produit la mention « vendu par » et note qui vend l’offre affichée.</p>
+      <p class="fold-ref">Pour aller plus loin : <a href="https://www.marketplacepulse.com/">Marketplace Pulse</a></p>
+    </div>
+  </details>
+
+  <div class="challenge">
+    <p class="label"><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="5.6"/><circle cx="8" cy="8" r="2.2"/></svg>Défi · 2&nbsp;min</p>
+    <p class="challenge-text">Une marque <span class="code-term">1P</span> te demande de baisser le prix client de 10 %. Qui décide vraiment, et que peux-tu lui proposer ?</p>
+    <p class="challenge-hint">Indice : regarde qui fixe quoi dans le schéma.</p>
+    <details class="reveal">
+  <summary>Révéler la réponse</summary>
+  <p class="reveal-text">En 1P, c’est Amazon qui fixe le prix client : la marque ne le décide pas. Tu peux lui proposer de discuter de ce qu’elle maîtrise, comme le prix de gros ou une promotion financée, sans promettre le prix final.</p>
+</details>
+  </div>
+  <div class="quiz">
+    <h2 class="label label-accent">Teste-toi</h2>
+    <ol class="quiz-list">
+      <li class="fold-item">
+        <details class="fold">
+          <summary><span class="quiz-q">En <span class="code-term">1P</span>, qui vend le produit au client ?</span><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6"/></svg></summary>
+          <div class="fold-body"><p>Amazon. Amazon achète le produit à la marque, puis le revend.</p></div>
+        </details>
+      </li>
+      <li class="fold-item">
+        <details class="fold">
+          <summary><span class="quiz-q">En <span class="code-term">3P</span>, qui porte le stock ?</span><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6"/></svg></summary>
+          <div class="fold-body"><p>Le vendeur. Il en reste propriétaire, même s’il confie la logistique à Amazon.</p></div>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+</section>
+
+<section class="section section-ruled" aria-labelledby="radar-title">
+  <h2 class="label label-accent" id="radar-title"><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="m10.4 10.4 3.1 3.1"/></svg>Radar · Ce qui bouge</h2>
+  <p class="compact-sub">Édition courte : peu d’articles de qualité aujourd’hui.</p>
+  <ol class="radar-list">
+    <li class="radar-item">
+      <p class="radar-num" aria-hidden="true">1</p>
+      <div>
+        <p class="label radar-tag">Amazon</p>
+        <h3 class="radar-title">Amazon : les ventes en ligne progressent de 2 %</h3>
+        <p class="radar-sentence">Au troisième trimestre, les ventes en ligne d’Amazon progressent de 2 % sur un an, une comparaison rendue plus difficile par le déplacement de Prime Day au trimestre précédent.</p>
+        <p class="reflex"><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.8 1.8 3.6 9h4l-.6 5.2L12.4 7h-4l.4-5.2Z"/></svg><span><span class="lead-in">Réflexe.</span> Vérifie l’effet du calendrier de Prime Day avant de comparer les ventes de tes marques.</span></p>
+        <a class="source-link" href="https://www.retaildive.com/news/amazon-ceo-retail-business-important-q3-earnings/873316/">Lire sur Retail Dive&nbsp;→</a>
+      </div>
+    </li>
+    <li class="radar-item">
+      <p class="radar-num" aria-hidden="true">2</p>
+      <div>
+        <p class="label radar-tag">Retail</p>
+        <h3 class="radar-title">Lengow annonce l’acquisition de DAILY&amp;CO</h3>
+        <p class="radar-sentence">Lengow annonce l’acquisition de DAILY&amp;CO pour développer ses services de gestion déléguée sur les marketplaces, notamment l’intégration et l’enrichissement des catalogues.</p>
+        <p class="reflex"><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.8 1.8 3.6 9h4l-.6 5.2L12.4 7h-4l.4-5.2Z"/></svg><span><span class="lead-in">Réflexe.</span> Demande à tes marques quelles tâches de gestion de catalogue elles souhaitent déléguer sur les marketplaces.</span></p>
+        <a class="source-link" href="https://www.ecommerce-nation.fr/lengow-dailyco-services-manages-marketplace/">Lire sur E-commerce Nation&nbsp;→</a>
+      </div>
+    </li>
+  </ol>
+</section>
+<section class="section section-ruled" aria-labelledby="also-title">
+  <h2 class="label label-accent" id="also-title">À lire aussi</h2>
+  <ul class="compact-list">
+    <li><a class="compact-title" href="https://news.google.com/rss/articles/CBMiyAJBVV95cUxNcE42VVNoaGR0akN0WUNOX080SzhDQ3V5a2xGRFowQlFuOGRLNW05X2tXRXNrTUZqajREV3d4VWt3Zy1Jc1ZqcC1BdXVoczA2eFNON2l4eDJmRFBxNXNsbkNCcnppS3BITjhVQ0p2bWdQcVBKYWVJUXFvSHNVTEV3ZVY0c3g1RER3b1NlWVlKSGFPdUxvcHlSSzVpMjF5cVNqbTNfQlB5dHJjMmZBNHR6SGFzZEx6eV90MnotWHlENHR1Q1pqYjVKbWdhVkdlTFlkQ21ocnRiWVM2V0FDY0JoV3JRZW9zbWQ4cjBMQjlKM0Y5WERqeUlsWmpqVXp1eUpwWnByYnhLbG9jSm15WEp1UThVUlhubl9aSWhiWDNZYVM0NmJkb0h1RUVPMk4wbksyeXRPSFRNcGlEcXMtUkJ5UUNEeWpQY2Ix?oc=5">L’entreprise Vusion, qui déploie ses solutions chez Carrefour et Walmart, se renforce sur le retail media en magasin avec l’acquisition d’In-Store Media</a><p class="compact-sub">LSA conso</p></li>
+    <li><a class="compact-title" href="https://news.google.com/rss/articles/CBMipgFBVV95cUxPR282UnlTMUJRWU1rcE84VmpSVEpxZXlkODBpOUhkOWJhUWJ4LTAwcEtoT1UtRVRSU09kYkZHeHUzVUtkM0RXZVhyNGh2eFdtZHFOYi1qRnhjV05BbXV6Q1V0aHNfUEx6ZXg5US1VLVZGbjRvNFAtZTBLZzJPdW9BMlVnS1dwMWJZbk9rMjlTVFBsSnhhbUxVWGRxVlhSQWtKZlhnU1Bn?oc=5">Amazon Ads Unveils New AI Tools</a><p class="compact-sub">MediaPost</p></li>
+    <li><a class="compact-title" href="https://www.adexchanger.com/the-big-story/smart-acquisition-or-frankenstack-stagwell-freestar-and-doordash-instacart/">Smart Acquisition Or Frankenstack? Stagwell-Freestar And DoorDash-Instacart</a><p class="compact-sub">AdExchanger</p></li>
+  </ul>
+</section>
+<section class="section section-ruled" aria-labelledby="agenda-title">
+  <h2 class="label label-accent" id="agenda-title">À l'agenda</h2>
+  <ul class="compact-list">
+    <li><p class="agenda-date">19 novembre</p><p class="compact-title">Résultats du 3e trimestre de Walmart (date estimée)</p></li>
+    <li><p class="agenda-date">27 novembre</p><p class="compact-title">Black Friday</p></li>
+    <li><p class="agenda-date">30 novembre</p><p class="compact-title">Cyber Monday</p></li>
+  </ul>
+</section>
+
+<section class="section section-ruled" aria-labelledby="week-title">
+  <h2 class="label label-accent" id="week-title">Ta semaine</h2>
+  <ol class="days" aria-label="Les jours de la semaine">
+    <li class="day" data-date="2026-10-26" aria-label="lundi"><span><span class="day-letter" aria-hidden="true">L</span><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 4.8"/></svg></span></li>
+    <li class="day" data-date="2026-10-27" aria-label="mardi"><span><span class="day-letter" aria-hidden="true">M</span><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 4.8"/></svg></span></li>
+    <li class="day" data-date="2026-10-28" aria-label="mercredi"><span><span class="day-letter" aria-hidden="true">M</span><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 4.8"/></svg></span></li>
+    <li class="day" data-date="2026-10-29" aria-label="jeudi"><span><span class="day-letter" aria-hidden="true">J</span><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 4.8"/></svg></span></li>
+    <li class="day" data-date="2026-10-30" aria-label="vendredi"><span><span class="day-letter" aria-hidden="true">V</span><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 4.8"/></svg></span></li>
+    <li class="day" data-date="2026-10-31" aria-label="samedi"><span><span class="day-letter" aria-hidden="true">S</span><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 4.8"/></svg></span></li>
+    <li class="day today" data-date="2026-11-01" aria-label="dimanche" aria-current="date"><span><span class="day-letter" aria-hidden="true">D</span><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3.2L13 4.8"/></svg></span></li>
+  </ol>
+  <p class="week-note">Demain, tu passes à l’action.</p>
+  <button class="mark-done" id="mark-done" type="button" hidden aria-pressed="false" data-label="Marquer la leçon comme faite" data-done-label="Fait. Annuler">Marquer la leçon comme faite</button>
+</section>
+
+<footer class="footer">
+  <p>Sources du jour : Retail Dive, E-commerce Nation, LSA conso, MediaPost, AdExchanger.</p>
+  <p><a href="../">Voir l'archive</a></p>
+</footer>
+
+</main>
+<script>
+/* La semaine se coche dans ce navigateur seulement : ni compte, ni serveur. Sans script, le bouton reste caché. */
+(function () {
+  var KEY = "restock:faits", KEEP = 60;
+  var today = document.body.getAttribute("data-day");
+  var button = document.getElementById("mark-done");
+  var days = document.querySelectorAll(".day");
+  function read() { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch (error) { return []; } }
+  function write(list) { try { localStorage.setItem(KEY, JSON.stringify(list.slice(-KEEP))); return true; } catch (error) { return false; } }
+  function paint() {
+    var done = read();
+    days.forEach(function (day) {
+      var isDone = done.indexOf(day.getAttribute("data-date")) !== -1;
+      day.classList.toggle("done", isDone);
+      var name = day.getAttribute("aria-label").split(",")[0];
+      day.setAttribute("aria-label", isDone ? name + ", fait" : name);
+    });
+    var pressed = done.indexOf(today) !== -1;
+    button.setAttribute("aria-pressed", String(pressed));
+    button.textContent = button.getAttribute(pressed ? "data-done-label" : "data-label");
+  }
+  if (!button) { return; }
+  button.addEventListener("click", function () {
+    var done = read(), index = done.indexOf(today);
+    if (index === -1) { done.push(today); } else { done.splice(index, 1); }
+    write(done);
+    paint();
+  });
+  button.hidden = false;
+  paint();
+})();
+</script>
+</body>
+</html>

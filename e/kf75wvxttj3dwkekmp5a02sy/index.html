@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="color-scheme" content="light dark">
+<title>Restock, archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #FBF8F2;
+  --text: #1C232B;
+  --muted: #666A6E;
+  --rule: #D9D3C7;
+  --accent: #A85400;
+  --orange: #FF9900;
+  --navy: #232F3E;
+  --link: #007185;
+  --box-fill: #232F3E;
+  --box-text: #FFFFFF;
+  --serif: "Instrument Serif", Georgia, serif;
+  --sans: "Instrument Sans", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12171D;
+    --text: #EDE8DF;
+    --muted: #9CA3AA;
+    --rule: #2A333D;
+    --accent: #FFAE3D;
+    --link: #8BE0EE;
+    --box-fill: #2B3A4D;
+    --box-text: #EDE8DF;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.6; font-weight: 400; }
+h1, h2, h3, p, ul, ol { margin: 0; padding: 0; font-weight: 400; }
+ul, ol { list-style: none; }
+em, i { font-family: var(--serif); font-style: italic; font-weight: 400; }
+strong, b { font-weight: 400; }
+a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.icon { flex: none; display: block; }
+.lesson-title, .lesson-sub, .radar-title, .challenge-text, .quiz-q, .compact-title, .week-note, .review-list li { text-wrap: balance; }
+/* Le « 1 » d'Instrument Serif se lit comme un « I » : 1P et 3P passent en Instrument Sans. */
+.code-term { font-family: var(--sans); font-style: normal; font-size: 0.82em; letter-spacing: -0.01em; }
+.page { max-width: 680px; margin: 0 auto; padding: 32px 22px 56px; }
+.label { font-size: 11px; line-height: 1.5; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+.label-accent { color: var(--accent); display: flex; align-items: center; gap: 8px; }
+.section { margin-top: 56px; }
+.section-ruled { border-top: 1px solid var(--text); padding-top: 18px; }
+
+/* En-tête */
+.brand { font-family: var(--serif); font-size: clamp(60px, 5vw + 40px, 76px); line-height: 1; letter-spacing: -0.01em; }
+.tagline { font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.3; color: var(--muted); margin-top: 8px; }
+.meta { display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid var(--text); border-bottom: 1px solid var(--rule); margin-top: 18px; padding: 10px 0; color: var(--muted); }
+.times { display: flex; flex-wrap: wrap; gap: 8px 22px; padding-top: 12px; font-size: 13px; line-height: 1.4; color: var(--muted); }
+.times li { display: flex; align-items: center; gap: 7px; }
+
+/* Compétence du jour */
+.series { display: flex; align-items: center; gap: 14px; margin-top: 12px; }
+.series-bar { flex: 1; height: 1px; background: var(--rule); position: relative; }
+.series-bar span { position: absolute; left: 0; top: -1px; height: 3px; background: var(--orange); }
+.series-count { font-family: var(--serif); font-style: italic; font-size: 16px; line-height: 1; color: var(--muted); white-space: nowrap; }
+.lesson-title { font-family: var(--serif); font-size: clamp(56px, 8.6vw + 22px, 76px); line-height: 1; letter-spacing: -0.015em; margin-top: 26px; }
+.lesson-sub { font-family: var(--serif); font-style: italic; font-size: 24px; line-height: 1.22; color: var(--muted); margin-top: 16px; }
+.schema { margin: 30px 0 0; }
+.schema svg { display: block; width: 100%; height: auto; }
+.points { margin-top: 28px; display: grid; gap: 14px; }
+.points li, .reflex { display: flex; gap: 12px; align-items: flex-start; }
+.points .icon, .reflex .icon { margin-top: 5px; color: var(--accent); }
+.lead-in { font-family: var(--serif); font-style: italic; font-size: 18px; line-height: 1.3; }
+
+/* Défi */
+.challenge { background: var(--navy); color: #FFFFFF; border-radius: 2px; padding: 26px 22px 24px; margin-top: 36px; }
+.challenge .label { color: var(--orange); display: flex; align-items: center; gap: 8px; }
+.challenge-text { font-family: var(--serif); font-style: italic; font-size: clamp(32px, 1.6vw + 26px, 38px); line-height: 1.12; margin-top: 12px; }
+.challenge-hint { font-size: 14px; line-height: 1.5; color: #C9D1D9; margin-top: 16px; }
+.challenge a { color: #8BE0EE; }
+
+/* Réponses à révéler */
+.reveal { margin-top: 14px; }
+.reveal summary { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid currentColor; border-radius: 2px; font-size: 14px; font-weight: 500; cursor: pointer; list-style: none; }
+.reveal summary::-webkit-details-marker { display: none; }
+.reveal summary:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+.reveal-text { margin-top: 12px; font-size: 15px; }
+.reveal-why { opacity: 0.85; }
+.quiz { margin-top: 36px; }
+.quiz-list { margin-top: 8px; border-bottom: 1px solid var(--rule); }
+.fold { border-top: 1px solid var(--rule); }
+.quiz-list .fold:first-child { border-top: 0; }
+.fold summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 44px; padding: 12px 0; cursor: pointer; list-style: none; }
+.fold summary::-webkit-details-marker { display: none; }
+.fold summary:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+.fold summary .icon { color: var(--muted); transition: transform 0.15s ease; }
+.fold[open] summary .icon { transform: rotate(180deg); }
+.fold-body { padding: 0 28px 16px 0; font-size: 15px; }
+.fold-body p + p { margin-top: 10px; }
+.quiz-q { font-family: var(--serif); font-size: 24px; line-height: 1.2; }
+.deep { margin-top: 28px; border-bottom: 1px solid var(--rule); }
+.deep-label { font-size: 15px; font-weight: 500; }
+.deep-sub { font-weight: 500; color: var(--muted); margin-top: 16px; }
+.status { font-size: 14px; color: var(--accent); margin-top: 12px; }
+.fold-ref { font-size: 14px; color: var(--muted); }
+.yesterday { border-top: 0; border-bottom: 1px solid var(--rule); color: var(--muted); font-size: 15px; }
+.review-label { margin-top: 32px; }
+.example { border: 1px solid var(--rule); border-radius: 2px; padding: 14px 16px; margin-top: 18px; }
+.example-label { color: var(--muted); margin-bottom: 6px; }
+.fold-body .example + p { margin-top: 18px; }
+
+/* Radar */
+.radar-list { display: grid; gap: 40px; margin-top: 24px; }
+.radar-item { display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 8px; }
+.radar-num { font-family: var(--serif); font-size: 60px; line-height: 0.95; color: var(--accent); }
+.radar-tag { color: var(--muted); }
+.radar-title { font-family: var(--serif); font-size: clamp(30px, 1vw + 26px, 34px); line-height: 1.08; margin-top: 6px; }
+.radar-sentence { font-size: 15px; color: var(--muted); margin-top: 12px; }
+.reflex { margin-top: 14px; font-size: 15px; }
+.source-link { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; margin-top: 2px; }
+
+/* À lire aussi, agenda */
+.compact-list { margin-top: 12px; }
+.compact-list li { border-top: 1px solid var(--rule); padding: 12px 0; }
+.compact-list li:first-child { border-top: 0; }
+.compact-title { font-family: var(--serif); font-size: 21px; line-height: 1.2; }
+a.compact-title { display: block; color: var(--text); text-decoration: none; }
+a.compact-title:hover, a.compact-title:focus-visible { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.compact-sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.agenda-date { font-size: 13px; color: var(--accent); }
+
+/* Vocabulaire */
+.vocab { display: grid; grid-template-columns: 1fr 1fr; margin-top: 18px; }
+.vocab-item { min-width: 0; padding-right: 16px; }
+.vocab-item + .vocab-item { border-left: 1px solid var(--rule); padding-right: 0; padding-left: 16px; }
+.vocab-term { font-family: var(--serif); font-size: 44px; line-height: 1; overflow-wrap: anywhere; }
+.vocab-full { font-family: var(--serif); font-style: italic; font-size: 17px; line-height: 1.2; color: var(--muted); margin-top: 8px; }
+.vocab-def { font-size: 15px; margin-top: 12px; }
+
+/* Ta semaine */
+.days { display: flex; justify-content: space-between; max-width: 400px; margin-top: 14px; }
+.day { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; }
+.day span { width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--rule); border-radius: 50%; font-size: 12px; color: var(--muted); }
+.day.today span { background: var(--orange); border-color: var(--orange); color: #0F1111; font-weight: 500; }
+.day .icon { display: none; }
+.day.done .day-letter { display: none; }
+.day.done .icon { display: block; }
+.day.done span { border-color: var(--accent); color: var(--accent); }
+.day.done.today span { border-color: var(--orange); color: #0F1111; }
+.week-note { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.25; color: var(--muted); margin-top: 14px; }
+.mark-done { display: inline-flex; align-items: center; min-height: 44px; margin-top: 12px; padding: 0 14px; border: 1px solid var(--rule); border-radius: 2px; background: none; color: var(--muted); font: 500 13px/1 var(--sans); cursor: pointer; }
+.mark-done[hidden] { display: none; }
+.mark-done[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+
+/* Revue et Agir */
+.review-list { margin-top: 12px; }
+.review-list li { border-top: 1px solid var(--rule); padding: 10px 0; font-family: var(--serif); font-size: 22px; line-height: 1.2; }
+.review-list li:first-child { border-top: 0; }
+.review-terms { font-size: 14px; color: var(--muted); margin-top: 8px; }
+.act-lines { margin-top: 14px; display: grid; gap: 10px; color: #E4E8EC; font-size: 15px; }
+.act-note { margin-top: 18px; font-size: 15px; }
+
+/* Archive */
+.archive-list { margin-top: 12px; }
+.archive-list li { border-top: 1px solid var(--rule); }
+.archive-list li:first-child { border-top: 0; }
+.archive-row { display: block; min-height: 44px; padding: 14px 0; color: var(--text); text-decoration: none; }
+.archive-row:hover .archive-title { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.archive-date { display: block; font-size: 13px; color: var(--accent); }
+.archive-title { display: block; font-family: var(--serif); font-size: 26px; line-height: 1.15; margin-top: 2px; text-wrap: balance; }
+
+/* Pied de page */
+.footer { border-top: 1px solid var(--rule); margin-top: 56px; padding-top: 16px; font-size: 13px; color: var(--muted); }
+
+/* Schéma */
+.sch-box { fill: none; stroke: var(--text); stroke-width: 1; }
+.sch-box-accent { fill: none; stroke: var(--orange); stroke-width: 1.3; }
+.sch-box-fill { fill: var(--box-fill); stroke: none; }
+.sch-box-dashed { fill: none; stroke: var(--text); stroke-width: 1; stroke-dasharray: 3 3; }
+.sch-label { font-family: var(--serif); font-size: 15px; fill: var(--text); text-anchor: middle; }
+.sch-label-fill { fill: var(--box-text); }
+.sch-note { font-family: var(--serif); font-style: italic; font-size: 13px; fill: var(--muted); text-anchor: middle; }
+.sch-row { font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 2px; fill: var(--muted); }
+.sch-arrow { stroke: var(--text); stroke-width: 1; fill: none; }
+.sch-rule { stroke: var(--rule); stroke-width: 1; }
+</style>
+</head>
+<body>
+<main class="page">
+<header>
+  <p class="brand">Restock</p>
+  <p class="tagline">Ta veille retail, e-commerce et IA du matin</p>
+</header>
+<section class="section section-ruled">
+  <h1 class="label label-accent">Archive</h1>
+  <ol class="archive-list">
+    <li><a class="archive-row" href="2026-11-01/"><span class="archive-date">Dimanche 1er novembre 2026</span><span class="archive-title"><span class="code-term">1P</span> ou <span class="code-term">3P</span> : qui décide du prix ?</span></a></li>
+  </ol>
+</section>
+</main>
+</body>
+</html>
